@@ -182,11 +182,13 @@ obj-$(CONFIG_LGE_DISPLAY_EXTERNAL_DSV)	+= dsv-dw8768_sm5107.o
 intel-soc-pmic-objs		:= intel_soc_pmic_core.o intel_soc_pmic_crc.o
 obj-$(CONFIG_INTEL_SOC_PMIC)	+= intel-soc-pmic.o
 obj-$(CONFIG_WCD9306_CODEC)	+= wcd9xxx-core.o wcd9xxx-irq.o wcd9xxx-slimslave.o\
-						wcd9xxx-core-resource.o wcd9306-regmap.o
+					wcd9xxx-core-resource.o wcd9306-regmap.o\
+					wcd-gpio-ctrl.o
 obj-$(CONFIG_WCD9320_CODEC)	+= wcd9xxx-core.o wcd9xxx-irq.o wcd9xxx-slimslave.o\
 						wcd9xxx-core-resource.o
 obj-$(CONFIG_WCD9330_CODEC)	+= wcd9xxx-core.o wcd9xxx-irq.o wcd9xxx-slimslave.o\
-						wcd9xxx-core-resource.o wcd9330-regmap.o
+					wcd9xxx-core-resource.o wcd9330-regmap.o\
+					wcd-gpio-ctrl.o
 obj-$(CONFIG_WCD9335_CODEC)	+= wcd9xxx-core.o wcd9xxx-irq.o wcd9xxx-slimslave.o\
 					wcd9xxx-core-resource.o wcd9335-regmap.o\
 					wcd9335-tables.o wcd-gpio-ctrl.o

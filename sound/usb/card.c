@@ -286,7 +286,7 @@ static int snd_usb_create_streams(struct snd_usb_audio *chip, int ctrlif)
 	struct usb_interface *usb_iface;
 	void *control_header;
 	int i, protocol;
-    int rest_bytes;
+	int rest_bytes;
 
 	usb_iface = usb_ifnum_to_if(dev, ctrlif);
 	if (!usb_iface) {
@@ -667,6 +667,7 @@ snd_usb_audio_probe(struct usb_device *dev,
 	usb_chip[chip->index] = chip;
 	chip->num_interfaces++;
 	chip->probing = 0;
+	intf->needs_remote_wakeup = 1;
 	mutex_unlock(&register_mutex);
 	return chip;
 
